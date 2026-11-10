@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bWAPP 노트 — 안전한 웹 보안 실습</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">SAFE LAB</span><h1>bWAPP 노트</h1><p>브라우저 안에서 배우는 Low · Medium 웹 취약점 시뮬레이터</p></div>
+    <button id="resetAll" class="ghost">전체 진행 초기화</button>
+  </header>
+  <main class="layout">
+    <aside class="sidebar"><div class="side-title">실습 목록 <span id="count"></span></div><div id="labList"></div><div class="safety"><strong>안전한 실습 공간</strong><p>실제 서버·메일·네트워크로 요청을 보내지 않습니다. 모든 결과는 교육용으로 브라우저 안에서만 재현됩니다.</p></div></aside>
+    <section class="content"><div id="labHeader"></div><div class="mode-tabs"><button data-mode="low" class="active">LOW</button><button data-mode="medium">MEDIUM</button></div><div class="lab-grid"><section class="card challenge"><div class="card-head"><span>실습 화면</span><span id="levelBadge" class="badge low">LOW</span></div><div id="challengeBody"></div></section><section class="card result"><div class="card-head"><span>시뮬레이션 결과</span><button id="clearResult" class="text-btn">초기화</button></div><div id="resultBody" class="result-body"><p class="muted">입력값을 넣고 실행해 보세요.</p></div></section></div><section class="card lesson"><div class="lesson-tabs"><button data-panel="flow" class="active">동작 흐름</button><button data-panel="why">왜 성공했나요?</button><button data-panel="defense">방어 방법</button><button data-panel="hint">힌트</button></div><div id="lessonBody"></div></section></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
